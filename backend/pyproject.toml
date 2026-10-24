@@ -1,0 +1,15 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "FastAPI backend for sales forecasting and inventory planning"
+readme = "README.md"
+authors = [
+    { name = "mouadelhaidoudi", email = "contact.mouadelhaidoudi@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.162.0",
+    "pydantic-settings>=2.16.1",
+    "supabase>=2.33.0",
+]
+
