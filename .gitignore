@@ -8,3 +8,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Extracted machine-learning datasets (use machine-learning/data.zip)
+machine-learning/data/*.csv
