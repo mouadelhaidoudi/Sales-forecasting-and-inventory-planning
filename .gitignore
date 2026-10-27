@@ -11,3 +11,7 @@ __pycache__/
 
 # Extracted machine-learning datasets (use machine-learning/data.zip)
 machine-learning/data/*.csv
+machine-learning/data/**/*.csv
+
+#outputs
+output/
