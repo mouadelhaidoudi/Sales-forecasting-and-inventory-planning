@@ -6,7 +6,7 @@ import exploration
 import preprocessing
 
 # temp commands
-LoadRawData = False
+LoadRawData = True
 
 ## data loading
 machine_learning_dir = Path(__file__).resolve().parent.parent
@@ -36,16 +36,16 @@ for name in csv_files :
         name = name if LoadRawData else name.replace(".csv", "_CLEANED.csv")
         df = pd.read_csv((data_dir if LoadRawData else cleaned_data_dir) / name, encoding="utf-8")
     except Exception as e :
-        print(f"failed to import {data_dir}\{name}, raised exception {e}")
+        print(f"failed to import {data_dir}\\{name}, raised exception {e}")
         continue
     dataframes[name] = df
 
         
 #data exloration
 for name,df in dataframes.items() :
-    exploration.exploreData(df)
+    exploration.exploreData(name,df)
 
-## data preprocessing
+# data preprocessing
 if  LoadRawData :
     dataframes_cleaned = {}
     for name,df in dataframes.items() :

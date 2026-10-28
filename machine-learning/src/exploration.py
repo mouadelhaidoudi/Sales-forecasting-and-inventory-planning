@@ -1,12 +1,11 @@
 import pandas as pd
 
 
-def exploreData(df, x=10) :
+def exploreData(name : str, df : pd.DataFrame, x=10) :
     
+    print (f"showing info for ========= {name} ==========")
     print(df.head(x))
     print(df.shape)
-    print(df.describe())
     df.info()
-    print(df.isna().sum())
-    print(df.duplicated().sum())
-    print(df.describe())
+    print(f"number of missings values{df.isna().sum()}")
+    print(f"number of duplicates : {df.duplicated().sum()}")
