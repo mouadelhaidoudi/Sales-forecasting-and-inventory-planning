@@ -4,9 +4,9 @@ from zipfile import ZipFile
 import numpy as np
 import exploration
 import preprocessing
-
+import visualisation
 # temp commands
-LoadRawData = True
+LoadRawData = False
 
 ## data loading
 machine_learning_dir = Path(__file__).resolve().parent.parent
@@ -45,6 +45,8 @@ for name in csv_files :
 for name,df in dataframes.items() :
     exploration.exploreData(name,df)
 
+
+
 # data preprocessing
 if  LoadRawData :
     dataframes_cleaned = {}
@@ -58,4 +60,8 @@ if  LoadRawData :
 
 
 ## data visualisation 
+
+visualisation.vis(dataframes)
+
+## Machine learning
 
